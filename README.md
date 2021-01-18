@@ -43,7 +43,15 @@ export default {
 
 ```
 
+## 参数说明
+
+|参数名|参数类型|参数说明|
+|-|-|-|
+|text|string|文本内容
+|strokes|array|多重描边的样式列表，由字符串组成的数组，每个字符串将作为-webkit-text-stroke属性的值。
+
 ## 效果
+![image](https://github.com/Tickly/stroke-text/blob/master/public/demo.png)
 
 
 ## 原理
