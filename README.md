@@ -1,24 +1,51 @@
 # stroke-text
 
-## Project setup
-```
-yarn install
+一个方便设置多重文字描边的组件。
+
+## 用法
+
+```vue
+<template>
+  <div id="app">
+    <stroke-text class="my-stroke-text" text="测试文字" :strokes="strokes" />
+  </div>
+</template>
+<script>
+import StrokeText from './StrokeText'
+
+export default {
+  name: 'App',
+  components: {
+    StrokeText,
+  },
+  data () {
+    return {
+      strokes: [
+        '0.2em red',
+        '0.4em green',
+        '0.6em black',
+      ]
+    }
+  },
+}
+</script>
+<style>
+#app {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.my-stroke-text {
+  font-size: 4em;
+  color: white;
+}
+</style>
+
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## 效果
 
-### Compiles and minifies for production
-```
-yarn build
-```
 
-### Lints and fixes files
-```
-yarn lint
-```
+## 原理
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+利用-webkit-text-stroke 属性生成描边样式，但是该属性只支持单个描边，所以组件里会自动生成多个 DOM 以实现多重描边效果

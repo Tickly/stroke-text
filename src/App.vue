@@ -1,28 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <stroke-text class="my-stroke-text" text="测试文字" :strokes="strokes" />
   </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import StrokeText from './StrokeText'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    StrokeText,
+  },
+  data () {
+    return {
+      strokes: [
+        '0.2em red',
+        '0.4em green',
+        '0.6em black',
+      ]
+    }
+  },
 }
 </script>
-
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   margin-top: 60px;
+}
+
+.my-stroke-text {
+  font-size: 4em;
+  color: white;
 }
 </style>
