@@ -8,6 +8,7 @@ export default {
     return h('span', {
       style: {
         position: 'relative',
+        zIndex: 0,
       }
     }, [
       this.text,

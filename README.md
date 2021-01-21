@@ -51,7 +51,7 @@ export default {
 |strokes|array|多重描边的样式列表，由字符串组成的数组，每个字符串将作为-webkit-text-stroke属性的值。
 
 ## 效果
-![image](https://github.com/Tickly/stroke-text/raw/master/public/demo.png)
+![image](public/demo.png)
 
 
 ## 原理
